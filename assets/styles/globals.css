@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;600;700;800;900&display=swap');
+@import url(custom.css);
+
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: var(--pale-blue);
+}
+
+/* Classes */
+
+.card-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-bg {
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
+    overflow: hidden;
+    box-shadow: 0px 40px 25px -10px rgba(104, 102, 255, 0.1);
+}
+
+.card-title {
+    color: var(--dark-blue);
+    margin: 50px 0 20px 0;
+    font-weight: 900;
+    font-size: 28px;
+}
+
+.card-description {
+    display: flex;
+    text-align: center;
+    padding: 0 50px;
+}
+
+.card-description p {
+    line-height: 1.5;
+    color: var(--desaturated-blue);
+}
+
+.card-subscription {
+    background-color: var(--very-pale-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.card-subscription-icon {
+    margin-right: 20px;
+}
+
+
+.card-subscription-plan {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-subscription-plan-timeframe{
+    color: var(--dark-blue);
+    font-weight: 900;
+}
+
+.card-subscription-plan-value {
+    margin-top: 8px;
+    color: var(--desaturated-blue);
+}
+
+.card-subscription-changePlan a {
+    margin-left: 80px;
+    font-weight: 900;
+    color: var(--bright-blue);
+    font-size: 14px;
+}
+
+.card-subscription-changePlan a:hover {
+    color: #766CF1;
+    text-decoration: none;
+}
+
+.card-button {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.card-button-payment {
+    background-color: var(--bright-blue);
+    color: white;
+    font-weight: 700;
+    margin: 35px;
+    width: 342px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 12px 40px -10px #766CF1;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.card-button-payment:hover {
+    background-color: #766CF1
+}
+
+.card-button-cancel {
+    font-weight: 900;
+    text-decoration: none;
+    margin-bottom: 25px;
+    color: var(--desaturated-blue);
+}
+
+.card-button-cancel:hover {
+    color: var(--dark-blue);
+}
+
+@media screen and (min-width:500px) {
+    .background {
+        background-image: url(../../images/pattern-background-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+@media screen and (max-width:500px) {
+
+    .card-bg {
+        max-width: 350px;
+
+    }
+
+    .card-image {
+        width: 350px;
+    }
+
+    .card-title {
+        margin: 30px 0 20px 0;
+        font-size: 26px;
+    }
+
+    .card-description {
+        padding: 0 40px;
+        line-height: 1.4;
+    }
+
+    .card-subscription {
+        padding: 18px;
+    }
+
+    .card-subscription-plan {
+        font-size: 14px;
+        margin-left: -4px;
+    }
+
+    .card-subscription-changePlan a {
+        margin-left: 54px;
+    }
+
+    .card-button-payment {
+        width: 287px;
+        height: 46px;
+        margin: 24px;
+        font-size: 15px;
+    }
+
+    .card-button-cancel {
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .card-bg {
+        max-width: 295px;
+    }
+
+    .card-image {
+        width: 295px;
+    }
+
+    .card-title {
+        margin: 25px 0 20px 0;
+        font-size: 24px;
+    }
+
+    .card-description {
+        padding: 0 30px;
+        line-height: 1.4;
+        font-size: 14px;
+    }
+
+    .card-subscription {
+        padding: 14px;
+    }
+
+    .card-subscription-plan {
+        font-size: 14px;
+        margin-left: -8px;
+    }
+
+    .card-subscription-changePlan a {
+        margin-left: 36px;
+        font-size: 12px;
+    }
+
+    .card-button-payment {
+        width: 250px;
+        height: 44px;
+        margin: 22px;
+        font-size: 14px;
+    }
+
+    .card-subscription-plan-value {
+        margin-top: 4px;
+    }
+
+    .card-button-cancel {
+        margin-bottom: 16px;
+        font-size: 14px;
+    }
+}
